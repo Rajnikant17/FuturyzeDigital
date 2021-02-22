@@ -1,0 +1,3 @@
+include ':moduleApiServices'
+include ':app'
+rootProject.name = "FutureDigital"
