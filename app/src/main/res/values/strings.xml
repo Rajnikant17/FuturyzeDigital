@@ -2,4 +2,9 @@
     <string name="app_name">FutureDigital</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_string">Plese allow the permission, and restart the App</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="hour">Hour</string>
 </resources>
