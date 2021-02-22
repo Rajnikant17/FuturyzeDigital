@@ -10,13 +10,5 @@
         android:name="com.example.futuredigital.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
-        <action
-            android:id="@+id/action_homeFragment_to_errorFragment"
-            app:destination="@id/errorFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/errorFragment"
-        android:name="com.example.futuredigital.ui.ErrorFragment"
-        android:label="fragment_error"
-        tools:layout="@layout/fragment_error" />
 </navigation>
