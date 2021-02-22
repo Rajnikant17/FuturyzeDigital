@@ -16,23 +16,27 @@ class ApiCallBusinessLogic
 @Inject
 constructor(val apiServices: ApiServices) {
     // Api called for current temprature
-    suspend fun execute(cityFetchedFormGps:String): Flow<DataState<ModelCurrentTemp>> = flow {
+    suspend fun execute(cityFetchedFormGps: String): Flow<DataState<ModelCurrentTemp>> = flow {
         emit(DataState.Loading)
         try {
-            val modelCurrentTemp = apiServices.fetchCurrentTemperaturedata(cityFetchedFormGps, Constants.TOKEN)
+            val modelCurrentTemp =
+                apiServices.fetchCurrentTemperaturedata(cityFetchedFormGps, Constants.TOKEN)
             emit(DataState.Success(modelCurrentTemp))
         } catch (e: Exception) {
             emit(DataState.Error(e))
         }
     }
+
     // Api called for getting forecast of  24 hours in every 3 hours
-    suspend fun executeToGetForecastTemp(cityFetchedFormGps:String): Flow<DataState<ModelForecastTemp>> = flow {
-        emit(DataState.Loading)
-        try {
-            val modelForeCastTemp = apiServices.fetchForecastTemperaturedata(cityFetchedFormGps, Constants.TOKEN)
-            emit(DataState.Success(modelForeCastTemp))
-        } catch (e: Exception) {
-            emit(DataState.Error(e))
+    suspend fun executeToGetForecastTemp(cityFetchedFormGps: String): Flow<DataState<ModelForecastTemp>> =
+        flow {
+            emit(DataState.Loading)
+            try {
+                val modelForeCastTemp =
+                    apiServices.fetchForecastTemperaturedata(cityFetchedFormGps, Constants.TOKEN)
+                emit(DataState.Success(modelForeCastTemp))
+            } catch (e: Exception) {
+                emit(DataState.Error(e))
+            }
         }
-    }
 }

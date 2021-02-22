@@ -16,37 +16,60 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="26dp"
             android:layout_gravity="center_horizontal"
             >
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/current_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="66sp"
+                android:textSize="26sp"
                 android:fontFamily="@font/roboto_black"
                 android:textColor="@color/text_color"
                 >
             </androidx.appcompat.widget.AppCompatTextView>
 
             <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_degree"
                 android:layout_toEndOf="@+id/current_temp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
                 android:layout_marginStart="7dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_alignTop="@+id/current_temp"
                 android:src="@drawable/circle"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_city_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_thin"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/current_temp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/light_black"
+                />
+            <ProgressBar
+                android:id="@+id/progressbar_current"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 />
         </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_city_name"
+            android:id="@+id/tv_errormsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="36sp"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
             android:fontFamily="@font/roboto_thin"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/light_black"
@@ -54,8 +77,30 @@
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_temperature"
+        android:id="@+id/rv_hourlyforecast"
         android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
         android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_errormsgHourlyForecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/roboto_thin"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/light_black"
+        />
+    <ProgressBar
+        android:id="@+id/progressbar_forecast"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

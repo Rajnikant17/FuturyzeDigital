@@ -7,4 +7,6 @@
     <string name="humidity">Humidity</string>
     <string name="wind_speed">Wind Speed</string>
     <string name="hour">Hour</string>
+    <string name="currentTempErrorMsg">Something went wrong while fetching current temperature due to network error or some other technical error.</string>
+    <string name="forecastErrorMsg">Something went wrong with fetching forecast temperature due to network error or some other technical error..</string>
 </resources>
